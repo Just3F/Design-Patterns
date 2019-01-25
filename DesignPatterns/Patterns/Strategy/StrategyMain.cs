@@ -2,7 +2,7 @@
 
 namespace DesignPatterns.Patterns.Strategy
 {
-    class StrategyMain
+    class StrategyMain : IExample
     {
         public void Start()
         {

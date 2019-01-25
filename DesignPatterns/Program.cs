@@ -1,5 +1,6 @@
 ﻿using System;
 using DesignPatterns.Patterns.Strategy;
+using DesignPatterns.Patterns.TemplateMethod;
 
 namespace DesignPatterns
 {
@@ -7,10 +8,15 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            StrategyMain example = new StrategyMain();
+            IExample example = new TemplateMethodMain();
             example.Start();
 
             Console.Read();
         }
+    }
+
+    interface IExample
+    {
+        void Start();
     }
 }
