@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DesignPatterns.Patterns.TemplateMethod
@@ -8,12 +10,12 @@ namespace DesignPatterns.Patterns.TemplateMethod
         public void Start()
         {
             const string testText = "test text!";
+            IEnumerable< TextEditor> textEditors = new List<TextEditor>(){ new Excel(), new Word()};
 
-            Excel excelEditor = new Excel();
-            excelEditor.GetReport(testText);
-
-            Word wordEditor = new Word();
-            wordEditor.GetReport(testText);
+            foreach (var textEditor in textEditors)
+            {
+                textEditor.GetReport(testText);
+            }
         }
 
         abstract class TextEditor
