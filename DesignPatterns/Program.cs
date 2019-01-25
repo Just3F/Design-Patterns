@@ -1,4 +1,5 @@
 ﻿using System;
+using DesignPatterns.Patterns.Strategy;
 
 namespace DesignPatterns
 {
@@ -6,7 +7,10 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            StrategyMain example = new StrategyMain();
+            example.Start();
+
+            Console.Read();
         }
     }
 }

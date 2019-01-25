@@ -9,7 +9,7 @@ namespace DesignPatterns.Storage
         {
             new LogEntry { Message = "Something went wrong!", LogType = LogType.Error },
             new LogEntry { Message = "All are working good now.", LogType = LogType.Info },
-            new LogEntry { Message = "Something bad happens! Error 404", LogType = LogType.Error },
+            new LogEntry { Message = "Something bad happened! Error 404", LogType = LogType.Error },
             new LogEntry { Message = "Please be careful", LogType = LogType.Warning }
         };
     }
