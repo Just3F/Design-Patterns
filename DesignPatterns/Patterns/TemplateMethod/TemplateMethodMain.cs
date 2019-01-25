@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace DesignPatterns.Patterns.TemplateMethod
 {
@@ -10,7 +8,7 @@ namespace DesignPatterns.Patterns.TemplateMethod
         public void Start()
         {
             const string testText = "test text!";
-            IEnumerable< TextEditor> textEditors = new List<TextEditor>(){ new Excel(), new Word()};
+            IEnumerable< TextEditor> textEditors = new List<TextEditor>{ new Excel(), new Word()};
 
             foreach (var textEditor in textEditors)
             {
